@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: SEE LICENSE IN LICENSE
+
 pragma solidity 0.8.30;
 
 import {Script} from "forge-std/Script.sol";
@@ -9,7 +10,7 @@ contract BasicNftTest is Script {
     DeployBasicNft public deployer;
     BasicNft public basicNft;
     address public COLLECTOR = makeAddr("collector");
-    string public constant PIXEL = "ipfs://example";
+    string public constant PIXEL = "ipfs://dino.png";
 
     function setUp() public {
         deployer = new DeployBasicNft();
@@ -24,9 +25,11 @@ contract BasicNftTest is Script {
     }
 
     function testCanMintAndHaveABalance() public {
+        // Arrange
         vm.prank(COLLECTOR);
+        // Act
         basicNft.mintNft(PIXEL);
-
+        // Assert
         assert(keccak256(abi.encodePacked(basicNft.tokenURI(0))) == keccak256(abi.encodePacked(PIXEL)));
     }
 }
