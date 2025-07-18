@@ -8,7 +8,7 @@ import {BasicNft} from "src/BasicNft.sol";
 import {ActionNft} from "src/ActionNft.sol";
 
 contract MintBasicNft is Script {
-    string public constant PIXEL = "ipfs://dino.png";
+    string public constant PIXEL = "ipfs://dino.png"; // <-- Insert a valid IPFS URL
 
     function run() external {
         address mostRecentlyDeployed = DevOpsTools.get_most_recent_deployment("BasicNft", block.chainid);
