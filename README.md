@@ -3,8 +3,7 @@
 
 Simple ERC721 **Non-Fungible Tokens (NFTs) called Pixel** built in Solidity. The two NFTs base on the OpenZeppelin smart contract library and use Foundry for automatic deployment and testing. The basic NFT is stored off-chain. The action-based NFT is stored on-chain and can change appearance based on the owners action:
 
-<img src=wallet-screenshot.png width=280 alt=wallet-screenshot>
-
+<p style="text-align: center"><img src="./wallet-screenshot.png" width="280" alt="wallet-screenshot" /></p>
 
 ### Credit 🙏
 This project is part of a code-along from the [Foundry Fundamentals](https://updraft.cyfrin.io/courses/foundry) course by [Cyfrin](https://cyfrin.io/). Big thanks for Patrick Collins and his team for offering free web3 education.

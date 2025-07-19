@@ -8,7 +8,7 @@ import {Base64} from "openzeppelin-contracts/contracts/utils/Base64.sol";
 
 contract DeployActionNft is Script {
     function run() external returns (ActionNft) {
-        string memory runSvg = vm.readFile("./img/dino_run.svg");   // <-- Specify SVG filepath of NFT image (run)
+        string memory runSvg = vm.readFile("./img/dino_run.svg"); // <-- Specify SVG filepath of NFT image (run)
         string memory stopSvg = vm.readFile("./img/dino_stop.svg"); // <-- Specify SVG filepath of NFT image (stop)
         console.log(runSvg);
 
